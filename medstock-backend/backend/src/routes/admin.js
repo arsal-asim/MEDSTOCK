@@ -1,0 +1,13 @@
+const router = require('express').Router();
+const { getDashboard, getPharmacies }        = require('../controllers/adminController');
+const { getAllRequests, updateRequestStatus } = require('../controllers/requestController');
+const { getAllRepayments, markPaid }          = require('../controllers/repaymentController');
+const { protect, adminOnly }                 = require('../middlewares/auth');
+router.use(protect, adminOnly);
+router.get('/dashboard',           getDashboard);
+router.get('/pharmacies',          getPharmacies);
+router.get('/requests',            getAllRequests);
+router.put('/requests/:id',        updateRequestStatus);
+router.get('/repayments',          getAllRepayments);
+router.put('/repayments/:id/paid', markPaid);
+module.exports = router;
