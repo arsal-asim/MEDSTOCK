@@ -33,6 +33,7 @@ export default function Register() {
   return (
     <div className="auth-page">
       <div className="auth-card">
+        <Link to="/" className="auth-back">← Back to Home</Link>
         <span className="auth-logo">💊 MedStock</span>
         <h1>Register Pharmacy</h1>
         <p className="auth-subtitle">Create your pharmacy account</p>

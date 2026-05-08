@@ -38,7 +38,7 @@ export function AdminRoute() {
   );
 }
 
-// Redirect logged-in users away from login/register
+// Redirect logged-in users away from login/register (but not from homepage)
 export function GuestRoute() {
   const { user, loading } = useAuth();
   if (loading) return <Spinner />;

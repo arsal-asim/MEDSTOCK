@@ -29,6 +29,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
+        <Link to="/" className="auth-back">← Back to Home</Link>
         <span className="auth-logo">💊 MedStock</span>
         <h1>Sign in</h1>
         <p className="auth-subtitle">Pharmacy Inventory Finance System</p>

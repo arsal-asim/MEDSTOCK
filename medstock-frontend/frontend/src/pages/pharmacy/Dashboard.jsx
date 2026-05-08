@@ -52,7 +52,7 @@ export default function Dashboard() {
       <div className="card">
         <div className="flex justify-between items-center" style={{ marginBottom: 16 }}>
           <h3 className="card-title" style={{ margin: 0 }}>Recent Requests</h3>
-          <Link to="/new-request" className="btn btn-primary btn-sm">+ New Request</Link>
+          <Link to="/requests" className="btn btn-primary btn-sm">+ New Request</Link>
         </div>
 
         {loading ? <p className="text-muted">Loading...</p> : (
@@ -68,7 +68,7 @@ export default function Dashboard() {
               </thead>
               <tbody>
                 {recent.length === 0 ? (
-                  <tr className="empty-row"><td colSpan={4}>No requests yet. <Link to="/new-request">Submit one now.</Link></td></tr>
+                  <tr className="empty-row"><td colSpan={4}>No requests yet. <Link to="/requests">Submit one now.</Link></td></tr>
                 ) : recent.map(r => (
                   <tr key={r.id}>
                     <td>{r.medicine_name}</td>

@@ -4,8 +4,7 @@ import { useAuth } from '../context/AuthContext';
 
 const pharmacyLinks = [
   { to: '/dashboard',  label: '📊 Dashboard' },
-  { to: '/requests',   label: '📋 My Requests' },
-  { to: '/new-request',label: '➕ New Request' },
+  { to: '/requests',   label: '📋 Requests' },
   { to: '/repayments', label: '💳 Repayments' },
   { to: '/profile',    label: '👤 Profile' },
 ];
